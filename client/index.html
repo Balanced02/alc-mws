@@ -1,0 +1,55 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Currency Converter</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+  <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 box" >
+    <header class="header">
+      <h1>ALC Currency Converter</h1>
+      <h2>
+        <strong> Using: </strong> Free Currency Converter API</h2>
+    </header>
+
+    <div class="conversionForm">
+
+      <section class="conversionForm__amount">
+        <label>Amount:</label>
+        <input type="number" min=0 class="currencyValue">
+      </section>
+
+      <section class="conversionForm__currencies">
+
+        <div class="conversionForm__from">
+          <label>From:</label>
+          <select class="convertFrom convert ">
+            <option selected disabled >Select One</option>
+          </select>
+        </div>
+
+        <div class="conversionForm__to">
+          <label>To:</label>
+          <select class="convertTo convert">
+              <option selected disabled >Select One</option>
+          </select>
+        </div>
+      </section>
+
+      <input type="submit" value="convert" class="currencySubmit">
+    </div>
+    <p class="output"></p>
+  </div>
+</body>
+<script type="text/javascript" src="/script.js"></script>
+<script>
+  if('serviceWorker' in navigator) {
+    navigator.serviceWorker
+             .register('/sw.js')
+             .then(function() { console.log("Service Worker Registered"); });
+  }
+  </script>
+</html>
