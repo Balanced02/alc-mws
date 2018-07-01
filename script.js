@@ -119,7 +119,7 @@ const convertCurrency = () => {
               )
             }
             showConversion(data, amount)
-          }).then(err => console.log(err))
+          }).catch(err => sendOutputFeedback('Please, you have to be online for first conversion between currencies'))
       }
     }
   })
