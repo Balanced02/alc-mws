@@ -10,6 +10,7 @@ self.addEventListener('install', e => {
         'https://free.currencyconverterapi.com/api/v5/currencies',
         'https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,100',
         'https://fonts.googleapis.com/css?family=Lobster+Two|Merriweather|Neuton|Redressed',
+        'https://balanced02.github.io/alc-mws/',
       ]);
     }).catch(err => console.log(err))
   );
