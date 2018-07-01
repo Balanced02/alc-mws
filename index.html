@@ -8,12 +8,16 @@
 </head>
 
 <body>
-  <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 box" >
+  <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 box">
     <header class="header">
       <h1>ALC Currency Converter</h1>
       <h2>
-        <strong> Using: </strong> Free Currency Converter API</h2>
+        <strong> Using: </strong> Free Currency Converter API
+      </h2>
     </header>
+        <h5 style="text-align: center" >
+          <strong> Guess what:</strong> Currencies already used in conversions can be re-used offline!!! 😀
+        </h5>
 
     <div class="conversionForm">
 
@@ -27,14 +31,14 @@
         <div class="conversionForm__from">
           <label>From:</label>
           <select class="convertFrom convert ">
-            <option selected disabled >Select One</option>
+            <option selected disabled>Select One</option>
           </select>
         </div>
 
         <div class="conversionForm__to">
           <label>To:</label>
           <select class="convertTo convert">
-              <option selected disabled >Select One</option>
+            <option selected disabled>Select One</option>
           </select>
         </div>
       </section>
@@ -46,10 +50,13 @@
 </body>
 <script type="text/javascript" src="./script.js"></script>
 <script>
-  if('serviceWorker' in navigator) {
+  if ('serviceWorker' in navigator) {
     navigator.serviceWorker
-             .register('/sw.js')
-             .then(function() { console.log("Service Worker Registered"); });
+      .register('/sw.js')
+      .then(function () {
+        console.log("Service Worker Registered");
+      });
   }
-  </script>
+</script>
+
 </html>
